@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>translated.io</title>
+    <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500;9..40,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <a href="#"><img draggable="false" src="./public/logo.svg" alt=""></a>
+        </div>
+
+        <div class="jumbotron">
+            <section class="block to-translate languages">
+                <div class="languages__row">
+                    <div class="languages__parameter">Detect Language</div>
+                    <div class="languages__parameter active">English</div>
+                    <div class="languages__parameter">French</div>
+                    <div class="languages__parameter">Spanish</div>
+                </div>
+                <hr>
+                <textarea id="text-to-translate" cols="30" rows="5" placeholder="Hello, how are you?"></textarea>
+                <div id="digit-count">19/500</div>
+                <div>
+                    <img class="sound sound_original" width="20" height="20" src="./public/sound_max_fill.svg" alt="">
+                    <img onclick="copyToClipboard()" class="copy copy_original" width="20" height="20" src="./public/Copy.svg" alt="">
+                </div>
+                <div class="translate-button"></div>
+            </section>
+    
+            <section class="block translated languages">
+                <div class="space-between">
+                    <div class="languages__row">
+                        <div class="languages__parameter">English</div>
+                        <div class="languages__parameter active">French</div>
+                        <div class="languages__parameter">Spanish</div>
+                    </div>
+                    <img class="reverse" width="20" height="20" src="./public/Horizontal_top_left_main.svg" alt="">
+                </div>
+                <hr>
+                <p id="translated">Bonjour, comment allez-vous?</p>
+                <div>
+                    <img class="sound sound_translated" width="20" height="20" src="./public/sound_max_fill.svg" alt="">
+                    <img class="copy copy_translated" width="20" height="20" src="./public/Copy.svg" alt="">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
