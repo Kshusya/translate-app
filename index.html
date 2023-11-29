@@ -28,11 +28,11 @@
                     <div class="languages__parameter">Spanish</div>
                 </div>
                 <hr>
-                <textarea id="text-to-translate" cols="30" rows="5" placeholder="Hello, how are you?"></textarea>
+                <textarea id="text-to-translate" cols="30" rows="5" maxlength="500" placeholder="Hello, how are you?"></textarea>
                 <div id="digit-count">19/500</div>
                 <div>
                     <img class="sound sound_original" width="20" height="20" src="./public/sound_max_fill.svg" alt="">
-                    <img onclick="copyToClipboard()" class="copy copy_original" width="20" height="20" src="./public/Copy.svg" alt="">
+                    <img onclick="copyToClipboard(false)" class="copy copy_original" width="20" height="20" src="./public/Copy.svg" alt="">
                 </div>
                 <div class="translate-button"></div>
             </section>
@@ -50,7 +50,7 @@
                 <p id="translated">Bonjour, comment allez-vous?</p>
                 <div>
                     <img class="sound sound_translated" width="20" height="20" src="./public/sound_max_fill.svg" alt="">
-                    <img class="copy copy_translated" width="20" height="20" src="./public/Copy.svg" alt="">
+                    <img onclick="copyToClipboard(true)" class="copy copy_translated" width="20" height="20" src="./public/Copy.svg" alt="">
                 </div>
             </section>
         </div>

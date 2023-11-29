@@ -132,4 +132,6 @@ textarea::placeholder {
     font-size: 14px;
     line-height: 0.875rem;
     height: 86px;
+    max-width: 100%;
+    word-break: break-word;
 }
