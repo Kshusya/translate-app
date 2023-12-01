@@ -126,7 +126,7 @@ textarea::placeholder {
     border-radius: 10px;
 }
 
-.reverse, .sound, .copy {
+#reverse-button, .sound, .copy {
     cursor: pointer;
     border: 2px solid #4D5562;
     padding: 3px;
@@ -140,7 +140,7 @@ textarea::placeholder {
     margin-right: 5px;
 }
 
-#digit-count {
+#characters-count {
     color: #4D5562;
     font-size: 12px;
     line-height: 0.75rem;
