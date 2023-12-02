@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
     font-family: 'DM Sans', sans-serif;
 }
@@ -8,27 +15,35 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 .space-between {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .align-center {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .align-flex-end {
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 body {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    /* #070814
-    #050612 */
+    background: -webkit-gradient(linear, left top, left bottom, from(#070814), to(#050612));
+    background: -o-linear-gradient(#070814, #050612);
     background: linear-gradient(#070814, #050612);
 }
 
@@ -37,9 +52,7 @@ hr {
     height: 1px;
     border-style: solid;
     border-width: 0;
-    /* Убираем стандартную рамку */
     margin: 15px 0;
-    /* Верхний и нижний отступы */
 }
 
 textarea {
@@ -52,6 +65,22 @@ textarea {
     outline: none;
     border: none;
     height: 5.65rem;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #F9FAFB;
+}
+
+textarea::-moz-placeholder {
+    color: #F9FAFB;
+}
+
+textarea:-ms-input-placeholder {
+    color: #F9FAFB;
+}
+
+textarea::-ms-input-placeholder {
+    color: #F9FAFB;
 }
 
 textarea::placeholder {
@@ -69,24 +98,45 @@ textarea::placeholder {
 .logo {
     padding-top: 80px;
     padding-bottom: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .jumbotron {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
     row-gap: 10px;
+    padding-bottom: 200px;
 }
 
 .block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 220px;
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
     width: 100%;
     border-radius: 20px;
     border: 1px solid #4D5562;
@@ -104,9 +154,15 @@ textarea::placeholder {
 }
 
 .languages__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 20px;
 }
 
@@ -144,8 +200,12 @@ textarea::placeholder {
     color: #4D5562;
     font-size: 12px;
     line-height: 0.75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     margin: 0px 0px 10px 0px;
 }
 
@@ -164,9 +224,15 @@ textarea::placeholder {
     color: #F9FAFB;
     border: 1px solid #7CA9F3;
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px 20px;
     font-size: 14px;
     line-height: 0.875rem;
@@ -179,11 +245,15 @@ textarea::placeholder {
 
 @media screen and (max-width: 1024px) {
     .jumbotron {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .block {
-        flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
         width: 80%;
     }
 
