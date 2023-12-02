@@ -22,7 +22,6 @@
         <div class="jumbotron">
             <section class="block to-translate languages">
                 <div class="languages__row">
-                    <div class="languages__parameter">Detect Language</div>
                     <div data-language="en" class="languages__parameter active">English</div>
                     <div data-language="fr" class="languages__parameter">French</div>
                     <div data-language="es" class="languages__parameter">Spanish</div>
@@ -32,7 +31,7 @@
                 <div id="characters-count">19/500</div>
                 <div class="d-flex space-between align-flex-end">
                     <div class="d-flex">
-                        <img class="sound sound_original" width="20" height="20" src="./public/sound_max_fill.svg" alt="">
+                        <img onclick="textToSpeech(false)" class="sound sound_original" width="20" height="20" src="./public/sound_max_fill.svg" alt="">
                         <img onclick="copyToClipboard(false)" class="copy copy_original" width="20" height="20" src="./public/Copy.svg" alt="">
                     </div>
                     <button id="translate-button">
@@ -54,7 +53,7 @@
                 <hr>
                 <p id="translated">Bonjour, comment allez-vous?</p>
                 <div class="d-flex">
-                    <img class="sound sound_translated" width="20" height="20" src="./public/sound_max_fill.svg" alt="">
+                    <img onclick="textToSpeech(true)" class="sound sound_translated" width="20" height="20" src="./public/sound_max_fill.svg" alt="">
                     <img onclick="copyToClipboard(true)" class="copy copy_translated" width="20" height="20" src="./public/Copy.svg" alt="">
                 </div>
             </section>

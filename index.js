@@ -125,3 +125,14 @@ function copyToClipboard(isTranslated) {
         navigator.clipboard.writeText(text.value);
     }
 }
+
+function textToSpeech(isTranslated) {
+    if (!('speechSynthesis' in window)) {
+        alert("Your browser doesn't support speech API");
+        return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(isTranslated ? paragraph.textContent : textarea.value);
+
+    speechSynthesis.speak(utterance);
+}
